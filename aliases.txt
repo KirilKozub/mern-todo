@@ -1,0 +1,5 @@
+[alias]
+    prerelease = "!f() { \
+      v=$(node -p \"require('./package.json').version\"); \
+      git commit -am \"prerelease - $v\"; \
+    }; f"
